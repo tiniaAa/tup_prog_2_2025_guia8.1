@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Text;
@@ -24,19 +25,25 @@ namespace Ejercicio1.Models
             return importe;
         }
 
-        public string[] Exportar()
+        public string Exportar()
         {
-            List<Asalariado> exporte = new List<Asalariado>();
-            
-            
-            return;
+            return $"Asalariado: {Nombre}-{DNI}-{Basico}-{AportesPrevisionales}";
         }
         public override string ToString()
         {
+            return $"Nombre {Nombre}({DNI})";
         }
         public override string[] GenerarRecibo()
         {
-            throw new NotImplementedException();
+            double importe = CalcularImportarAPagar();
+            List<String> exporte = new List<String>();
+
+            exporte.Add($"Nombre: {Nombre}- DNI: {DNI}");
+            exporte.Add($"Basico: ${Basico}");
+            exporte.Add($"Aporte: ${AportesPrevisionales}");
+            exporte.Add($"Total: ${importe}");
+
+            return exporte.ToArray();
         }
     }
 }
