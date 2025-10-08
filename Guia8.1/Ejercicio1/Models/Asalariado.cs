@@ -10,8 +10,8 @@ namespace Ejercicio1.Models
 {
     public class Asalariado : Empleado, IExportable
     {
-        public double Basico { get; private set; }
-        public double AportesPrevisionales { get; private set; }
+        public double Basico { get;  set; }
+        public double AportesPrevisionales { get;  set; }
         public Asalariado(int dni, string nombre, double basico, double aporte ):base(dni,nombre) 
         {
             this.Basico = basico;
@@ -29,9 +29,9 @@ namespace Ejercicio1.Models
         {
             return $"Asalariado: {Nombre}-{DNI}-{Basico}-{AportesPrevisionales}";
         }
-        public override string ToString()
+        override public string ToString()
         {
-            return $"Nombre {Nombre}({DNI})";
+            return $"{Nombre}({DNI})";
         }
         public override string[] GenerarRecibo()
         {

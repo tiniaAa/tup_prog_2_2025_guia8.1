@@ -19,7 +19,7 @@ namespace Ejercicio1.Models
 
         abstract public double CalcularImportarAPagar();
         abstract public string[] GenerarRecibo();
-        abstract public string ToString();
+        //abstract public string ToString();
         public int CompareTo(object? obj ) 
         {
             Empleado empleado = obj as Empleado;
