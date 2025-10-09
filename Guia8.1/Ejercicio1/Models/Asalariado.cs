@@ -27,7 +27,8 @@ namespace Ejercicio1.Models
 
         public string Exportar()
         {
-            return $"Asalariado: {Nombre}-{DNI}-{Basico}-{AportesPrevisionales}";
+            return $"Asalariado;{DNI};{Nombre};{Basico};{AportesPrevisionales}";
+
         }
         override public string ToString()
         {

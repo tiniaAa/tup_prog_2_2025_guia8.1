@@ -26,9 +26,9 @@ namespace Ejercicio1.Models
 
         public string Exportar()
         {
-            return $"Nombre: {Nombre}-Dni: {DNI}-Horas Trabajadas: {HorasTrabajadas}-Importe por hora: {ImportePorHora}-Retenciones impositivos: {RetencionesImpositivas}";
+            return $"Jornalero;{DNI};{Nombre};{HorasTrabajadas};{ImportePorHora};{RetencionesImpositivas}";
         }
-
+        
         public override string[] GenerarRecibo()
         {
             double importe = CalcularImportarAPagar();

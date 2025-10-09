@@ -107,6 +107,7 @@
             button3.TabIndex = 3;
             button3.Text = "(3) Exportar Empleados";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
             // 
             // button4
             // 
@@ -116,6 +117,7 @@
             button4.TabIndex = 4;
             button4.Text = "(5) Generar Recibos ";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // Form1
             // 
